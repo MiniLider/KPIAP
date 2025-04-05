@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp1.Qskyrsii"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Экскурсии Тур Фирма" Height="634" Width="801">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Text="Экскурсии Тур Фирмы" FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="10" />
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Боковая панель для введения информации о экскурсии -->
+            <StackPanel VerticalAlignment="Top" Margin="10">
+                <TextBlock Text="Выберите экскурсию:" FontWeight="Bold" />
+                <ComboBox Name="ExcursionComboBox" Margin="0,5,0,10" Width="180" SelectionChanged="ExcursionComboBox_SelectionChanged">
+                    <ComboBoxItem Content="Экскурсия 1" />
+                    <ComboBoxItem Content="Экскурсия 2" />
+                    <ComboBoxItem Content="Экскурсия 3" />
+                </ComboBox>
+
+                <TextBlock Text="Дата экскурсии:" FontWeight="Bold" Margin="0,10,0,0" />
+                <DatePicker Name="ExcursionDatePicker" Margin="0,5,0,10" Width="180" />
+
+                <TextBlock Text="Количество человек:" FontWeight="Bold" />
+                <TextBox Name="NumberOfPeopleTextBox" Margin="0,5,0,10" Width="180" />
+
+                <Button Content="Забронировать" Margin="0,10,0,0" Width="180" Click="BookExcursion_Click" />
+            </StackPanel>
+
+            <!-- Основная область для информации об экскурсии -->
+            <StackPanel Grid.Column="1" Margin="10">
+                <TextBlock Text="Подробная информация о экскурсии" FontWeight="Bold" FontSize="18" Margin="0,0,0,10"/>
+                <ListView Name="ExcursionDetailsListView">
+                    <!-- Элементы списка будут добавляться динамически -->
+                </ListView>
+            </StackPanel>
+        </Grid>
+
+        <!-- Кнопка "Назад" -->
+        <Button x:Name="Bback1" Content="Назад" Click="Bback1_Click" HorizontalAlignment="Left" Height="35" Margin="24,494,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" />
+    </Grid>
+</Window>

@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WORLD FACE" Height="501.613" Width="937.5" Background="Gray">
+    <Grid RenderTransformOrigin="0.5,0.5" Background="#FFACA6A6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.276"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <TextBlock Text="WORLD FACE" FontSize="48" Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="307,130,182,277"/>
+
+        <Button x:Name="LoginButton" Content="Войти" Width="60" Height="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="713,0,0,387" Click="LoginButton_Click" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"/>
+        <Button x:Name="RegisterButton" Content="Зарегистрироваться" Width="125" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,32,387" Click="RegisterButton_Click" Grid.Column="1"/>
+
+        <Button Content="X" Width="25" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Click="CloseButton_Click" Grid.Column="1"/>
+        <Button x:Name="Podbor" Content="Подбор тура" HorizontalAlignment="Left" Margin="24,64,0,0" VerticalAlignment="Top" Width="75" Click="Podbor_Click"/>
+        <Button x:Name="HotelAnd" Content="Отель и прилет" HorizontalAlignment="Left" Margin="99,64,0,0" VerticalAlignment="Top" Width="92" Click="OtelPrilet_Click"/>
+        <Button x:Name="Avia" Content="Авиа" HorizontalAlignment="Left" Margin="191,64,0,0" VerticalAlignment="Top" Width="75" Click="Avia_Click"/>
+        <Button x:Name="Akskersii" Content="Экскурсии" HorizontalAlignment="Left" Margin="266,64,0,0" VerticalAlignment="Top" Width="75" Click="Qskyrsii_Click"/>
+        <Button x:Name="Skidki" Content="Скидки" HorizontalAlignment="Left" Margin="341,64,0,0" VerticalAlignment="Top" Width="75" Click="Rasprod_Click"/>
+        <Button x:Name="ZadatVopros" Content="Задать нам вопрос" HorizontalAlignment="Left" Margin="416,64,0,0" VerticalAlignment="Top" Width="123" Click="Zadat_Click"/>
+
+    </Grid>
+</Window>
